@@ -159,7 +159,7 @@ export const translations: Record<Language, Translation> = {
       topBannerButton: "మీ ఉచిత స్లాట్‌ను బుక్ చేసుకోండి",
       campFormTitle: "ఉచిత మెడికల్ క్యాంప్ రిజిస్ట్రేషన్",
       campFormSubtitle: "ఉచిత నిపుణుల సంప్రదింపుల కోసం మీ ఉచిత స్లాట్‌ను ఇప్పుడే బుక్ చేసుకోండి",
-      campLocation: "మెడ్సీ IVF, చిన్నగదిలి ప్లాట్ 9A, హెల్త్ సిటీ, విశాఖపట్నం, అడవివరం, ఆంధ్రప్రదేశ్ 530040"
+      campLocation: "వైజాగ్ IVF సెంటర్ / మెడ్సీ IVF, #29-2-4, 1వ అంతస్తు, వద్దిరాజు నిలయం, జైల్ రోడ్, వెటర్నరీ హాస్పిటల్ ఎదురుగా, విశాఖపట్నం – 530020"
     },
     hero: {
       badge: "",
@@ -169,7 +169,7 @@ export const translations: Record<Language, Translation> = {
       headlinePart2: "",
       tagline: "అత్యుత్తమ ఫెర్టిలిటీ సంరక్షణ. తల్లిదండ్రులు కావాలనే మీ ప్రయాణం ఇక్కడే మొదలవుతుంది.",
       subtext: "రుజువైన విజయవంతమైన రేట్లు, అగ్రశ్రేణి సంతానలేమి నిపుణులు మరియు అందుబాటు ధరల సంపూర్ణ చికిత్సా ప్రణాళికల కోసం మెడ్సీని ఎంచుకోండి. ఎటువంటి దాగి ఉన్న రుసుములు లేదా రిజిస్ట్రేషన్ ఛార్జీలు లేవు — మీరు తల్లిదండ్రులు కావడానికి తోడ్పడే నిజమైన నిపుణుల సంరక్షణ మాత్రమే.",
-      locationBadge: "అరిలోవ హెల్త్ సిటీ, విశాఖపట్నం",
+      locationBadge: "జైల్ రోడ్, విశాఖపట్నం",
       offerBadge: "SPECIAL DISCOUNT PACKAGE OFFER",
       offerText: "IVF చికిత్స కేవలం ₹1.8 లక్షలకే!",
       offerOriginalPrice: "సాధారణ మార్కెట్ ధర: ₹1.9 లక్షలు",
@@ -278,29 +278,19 @@ export const translations: Record<Language, Translation> = {
       disclaimer: "గమనిక: రోగి ఆరోగ్య స్థితి మరియు వైద్యుల నివేదికల ఆధారంగా ఛార్జీలలో స్వల్ప మార్పులు ఉండవచ్చు."
     },
     doctors: {
-      badge: "మా స్పెషలిస్ట్ డాక్టర్స్",
+      badge: "మా స్పెషలిస్ట్ డాక్టర్",
       title: "మా ఫెర్టిలిటీ నిపుణులు",
-      subtitle: "దశాబ్దాల అనుభవం కలిగిన ప్రముఖ సంతానలేమి వైద్యుల బృందం మీ కలల కుటుంబాన్ని साकारం చేయడానికి నిరంతరం కృషి చేస్తోంది.",
+      subtitle: "IVF, IUI, ICSI మరియు రీప్రొడక్టివ్ మెడిసిన్‌లో 11+ సంవత్సరాల అనుభవం కలిగిన ప్రముఖ సంతానలేమి వైద్యురాలు.",
       list: [
         {
-          id: "dr-sireesha",
-          name: "డా. సిరీష రాణి",
-          title: "Founder & MD | Senior Infertility Specialist",
-          qualifications: "MBBS, DNB (Ob & Gyn), DRM (Kiel Germany)",
-          expBadge: "20+ YEARS EXP",
-          photo: "/dr-sireesha-rani.png",
-          bio: "జర్మన్ కీల్ IVF ప్రోటోకాల్స్, రీకరెంట్ వైఫల్యాలు మరియు హై-రిస్క్ ప్రెగ్నెన్సీ సంరక్షణలో ప్రత్యేక నైపుణ్యం కలిగిన ప్రముఖ సంతానలేమి నిపుణులు.",
-          achievementBadge: "8,000+ Success Stories"
-        },
-        {
-          id: "dr-sudeshna",
-          name: "డా. సుధేష్ణాదేవి",
-          title: "Fertility & Surgery Expert",
-          qualifications: "MBBS, DNB (Ob & Gyn), FRM, FMAS, Dip.Cos.Gynecology",
-          expBadge: "12+ YEARS EXP",
-          photo: "/dr-sudeshna-devi.png",
-          bio: "లాపరోస్కోపిక్ సర్జరీ, హిస్టెరోస్కోపీ, రిప్రొడక్టివ్ మెడిసిన్ మరియు వ్యక్తిగతీకరించిన అండాశయ ప్రేరణ విధానాలలో ప్రముఖ వైద్య నిపుణులు.",
-          achievementBadge: "Laparoscopic Specialist"
+          id: "dr-mounica",
+          name: "డా. మౌనిక",
+          title: "ఇన్‌ఫెర్టిలిటీ స్పెషలిస్ట్ | IVF & రీప్రొడక్టివ్ మెడిసిన్",
+          qualifications: "MBBS, MS (Obstetrics & Gynaecology), Advanced Certificate in Reproductive Medicine & IVF",
+          expBadge: "11+ YEARS EXP",
+          photo: "/dr-mounica.png",
+          bio: "IVF, IUI, ICSI మరియు పునరుత్పత్తి వైద్యంలో వ్యక్తిగతీకరించిన చికిత్సను అందిస్తూ, సంతానలేమి నివారణ మరియు మహిళల ఆరోగ్య సంరక్షణలో నిపుణులు.",
+          achievementBadge: "సంతానలేమి & IVF నిపుణులు"
         }
       ]
     },
@@ -364,15 +354,15 @@ export const translations: Record<Language, Translation> = {
       ]
     },
     footer: {
-      aboutTitle: "మెడ్సీ IVF & హాస్పిటల్స్",
-      aboutText: "విశాఖపట్నంలో 8,000 పైగా విజయవంతమైన IVF కేసులతో అత్యుత్తమ సంతానలేమి చికిత్స నందిస్తున్న విశ్వసనీయ ఫెర్టిలిటీ సెంటర్.",
-      addressTitle: "ఆసుపత్రి చిరునామా",
-      addressValue: "ప్లాట్ నెం. 9A, హెల్త్ సిటీ, అరిలోవ, విశాఖపట్నం – 530040",
+      aboutTitle: "మెడ్సీ IVF & వైజాగ్ IVF సెంటర్",
+      aboutText: "విశాఖపట్నం జైల్ రోడ్డులో 8,000 పైగా విజయవంతమైన IVF కేసులతో అత్యుత్తమ సంతానలేమి చికిత్స నందిస్తున్న విశ్వసనీయ ఫెర్టిలిటీ సెంటర్.",
+      addressTitle: "సెంటర్ చిరునామా",
+      addressValue: "#29-2-4, 1వ అంతస్తు, వద్దిరాజు నిలయం, జైల్ రోడ్, వెటర్నరీ హాస్పిటల్ ఎదురుగా, విశాఖపట్నం – 530020",
       phoneTitle: "హెల్ప్‌లైన్ & అపాయింట్మెంట్స్",
       phoneValue: "+91 95025 34222",
       hoursTitle: "పని చేయు సమయాలు",
       hoursValue: "సోమవారం - ఆదివారం: ఉదయం 9:00 - సాయంత్రం 6:00",
-      copyright: "© 2026 MEDCY IVF & Hospitals. సర్వ హక్కులూ ప్రత్యేకించబడ్డాయి."
+      copyright: "© 2026 MEDCY IVF & వైజాగ్ IVF సెంటర్. సర్వ హక్కులూ ప్రత్యేకించబడ్డాయి."
     },
     modal: {
       title: "అపాయింట్మెంట్ నమోదైంది! 🎉",
@@ -404,7 +394,7 @@ export const translations: Record<Language, Translation> = {
       topBannerButton: "Book Your Free Slot Today",
       campFormTitle: "Free Medical Camp Registration",
       campFormSubtitle: "Book your complimentary slot for a free expert fertility consultation",
-      campLocation: "Medcy IVF, Chinnagadili Plot 9A, Health City, Visakhapatnam, Adavivaram, Andhra Pradesh 530040"
+      campLocation: "Vizag IVF Centre / Medcy IVF, #29-2-4, 1st Floor, Vaddiraju Nilayam, Jail Road, Opp. Veterinary Hospital, Visakhapatnam – 530020"
     },
     hero: {
       badge: "",
@@ -414,7 +404,7 @@ export const translations: Record<Language, Translation> = {
       headlinePart2: "",
       tagline: "Expert fertility care. Your journey to parenthood starts here.",
       subtext: "Choose Medcy for proven success rates, top-tier fertility specialists, and highly affordable, all-inclusive treatment plans. No hidden fees, no registration charges—just genuine, expert care to help you become parents.",
-      locationBadge: "Arilova Health City, Visakhapatnam",
+      locationBadge: "Jail Road, Visakhapatnam",
       offerBadge: "SPECIAL DISCOUNT PACKAGE OFFER",
       offerText: "IVF TREATMENT AT ₹1.8 LAKHS ONLY",
       offerOriginalPrice: "Standard Market Price: ₹1.9 Lakhs",
@@ -523,29 +513,19 @@ export const translations: Record<Language, Translation> = {
       disclaimer: "Note: Treatment fees may vary slightly depending on individualized clinical evaluation."
     },
     doctors: {
-      badge: "MEET THE EXPERTS",
-      title: "Meet the Experts",
-      subtitle: "Trusted medical leadership with decades of proven experience in complex infertility & gynecological procedures.",
+      badge: "MEET THE EXPERT",
+      title: "Meet the Expert",
+      subtitle: "Trusted medical leadership providing personalized care in IVF, IUI, ICSI, and reproductive medicine.",
       list: [
         {
-          id: "dr-sireesha",
-          name: "Dr. Sireesha Rani",
-          title: "Founder & MD | Senior Infertility Specialist",
-          qualifications: "MBBS, DNB (Ob & Gyn), DRM (Kiel Germany)",
-          expBadge: "20+ YEARS EXP",
-          photo: "/dr-sireesha-rani.png",
-          bio: "Pioneer in reproductive medicine with advanced specialization in German Kiel IVF protocols, recurrent failures, and high-risk pregnancy care.",
-          achievementBadge: "8,000+ Success Stories"
-        },
-        {
-          id: "dr-sudeshna",
-          name: "Dr. Sudheshna Devi",
-          title: "Fertility & Surgery Expert",
-          qualifications: "MBBS, DNB (Ob & Gyn), FRM, FMAS, Dip.Cos.Gynecology",
-          expBadge: "12+ YEARS EXP",
-          photo: "/dr-sudeshna-devi.png",
-          bio: "Expert in laparoscopic surgery, hysteroscopy, reproductive medicine, and personalized ovulation induction protocols.",
-          achievementBadge: "Laparoscopic Specialist"
+          id: "dr-mounica",
+          name: "Dr. Mounica",
+          title: "Infertility Specialist | IVF & Reproductive Medicine",
+          qualifications: "MBBS, MS (Obstetrics & Gynaecology), Advanced Certificate in Reproductive Medicine & IVF",
+          expBadge: "11+ YEARS EXP",
+          photo: "/dr-mounica.png",
+          bio: "Infertility specialist providing personalized care in IVF, IUI, ICSI, and reproductive medicine, with a focus on individualized fertility treatment and women's reproductive health.",
+          achievementBadge: "IVF & Reproductive Medicine Specialist"
         }
       ]
     },
@@ -609,15 +589,15 @@ export const translations: Record<Language, Translation> = {
       ]
     },
     footer: {
-      aboutTitle: "MEDCY IVF & Hospitals",
-      aboutText: "Visakhapatnam's premier fertility & reproductive medicine institute with 8,000+ successful IVF cases.",
-      addressTitle: "Hospital Address",
-      addressValue: "Plot No. 9A, Health City, Arilova, Visakhapatnam – 530040",
+      aboutTitle: "MEDCY IVF & Vizag IVF Centre",
+      aboutText: "Visakhapatnam's premier fertility & reproductive medicine institute on Jail Road with 8,000+ successful IVF cases.",
+      addressTitle: "Centre Address",
+      addressValue: "#29-2-4, 1st Floor, Vaddiraju Nilayam, Jail Road, Opp. Veterinary Hospital, Visakhapatnam – 530020",
       phoneTitle: "Helpline & Appointments",
       phoneValue: "+91 95025 34222",
       hoursTitle: "Working Hours",
       hoursValue: "Mon - Sun: 9:00 AM - 6:00 PM",
-      copyright: "© 2026 MEDCY IVF & Hospitals. All rights reserved."
+      copyright: "© 2026 MEDCY IVF & Vizag IVF Centre. All rights reserved."
     },
     modal: {
       title: "Appointment Reserved! 🎉",

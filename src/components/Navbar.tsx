@@ -14,46 +14,46 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
   return (
     <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/95 border-b border-[#652D6C]/15 shadow-sm transition-all duration-300">
       {/* Main Navbar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between gap-2 sm:gap-4">
         {/* Brand Logos */}
-        <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3.5 shrink-0">
           <a href="#" className="flex items-center group focus:outline-none">
             <img 
               src="/medcy-logo.png" 
               alt="Medcy IVF Logo" 
-              className="h-9 sm:h-12 lg:h-13 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-7 sm:h-10 lg:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
-          <span className="h-6 sm:h-8 w-px bg-[#652D6C]/25" aria-hidden="true"></span>
+          <span className="h-5 sm:h-7 w-px bg-[#652D6C]/25" aria-hidden="true"></span>
           <a href="#" className="flex items-center group focus:outline-none">
             <img 
               src="/vizag-ivf-logo.png" 
-              alt="Vizag IVF Centre Gajuwaka Logo" 
-              className="h-9 sm:h-12 lg:h-13 w-auto object-contain transition-transform group-hover:scale-105"
+              alt="Vizag IVF Centre Jail Road Logo" 
+              className="h-7 sm:h-10 lg:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </a>
         </div>
 
         {/* Action Controls */}
-        <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-1.5 sm:gap-3">
           {/* Language Toggle Button (EN 1st default, TE option) */}
-          <div className="flex items-center bg-[#FAF6FA] border border-[#652D6C]/25 rounded-full p-1 shadow-inner">
+          <div className="flex items-center bg-[#FAF6FA] border border-[#652D6C]/25 rounded-full p-0.5 sm:p-1 shadow-inner shrink-0">
             <button
               onClick={() => setLang('en')}
-              className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-full transition-all flex items-center gap-1 ${
+              className={`px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
                 lang === 'en'
-                  ? 'bg-[#652D6C] text-white shadow-md'
+                  ? 'bg-[#652D6C] text-white shadow-sm'
                   : 'text-[#56335B] hover:text-[#652D6C]'
               }`}
               title="Switch to English"
             >
-              English
+              EN
             </button>
             <button
               onClick={() => setLang('te')}
-              className={`px-3 py-1 text-xs sm:text-sm font-bold rounded-full transition-all flex items-center gap-1 ${
+              className={`px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
                 lang === 'te'
-                  ? 'bg-[#652D6C] text-white shadow-md'
+                  ? 'bg-[#652D6C] text-white shadow-sm'
                   : 'text-[#56335B] hover:text-[#652D6C]'
               }`}
               title="తెలుగు మార్చండి"
@@ -62,90 +62,110 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
             </button>
           </div>
 
-          {/* Direct Call Button */}
+          {/* Direct Call Button (Desktop) */}
           <a
             href="tel:+919502534222"
-            className="hidden lg:flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-[#652D6C] bg-[#FAF3FB] hover:bg-[#652D6C] hover:text-white border border-[#652D6C]/30 transition-all group"
+            className="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-bold text-[#652D6C] bg-[#FAF3FB] hover:bg-[#652D6C] hover:text-white border border-[#652D6C]/30 transition-all group shrink-0"
           >
-            <Phone className="w-4 h-4 text-[#9A389F] group-hover:text-white transition-colors animate-pulse" />
+            <Phone className="w-3.5 h-3.5 text-[#9A389F] group-hover:text-white transition-colors animate-pulse" />
             <span>{t.nav.phone}</span>
           </a>
 
-          {/* Book Appointment CTA */}
+          {/* Book Appointment CTA Button (Visible on sm/tablet/desktop, hidden on mobile to prevent clipping) */}
           <button
             onClick={onBookClick}
-            className="btn-primary-purple px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold flex items-center gap-2 shadow-lg"
+            className="hidden sm:flex btn-primary-purple px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs lg:text-sm font-bold items-center gap-2 shadow-md shrink-0 cursor-pointer active:scale-95 transition-all"
           >
-            <Calendar className="w-4 h-4 text-pink-300" />
+            <Calendar className="w-4 h-4 text-pink-300 shrink-0" />
             <span>{t.nav.bookAppointment}</span>
           </button>
         </div>
       </div>
 
       {/* Top Reference Banner Bar Below Main Navbar */}
-      <div className="bg-gradient-to-r from-[#45144A] via-[#652D6C] to-[#8F2D95] text-white border-t border-b border-white/10 shadow-lg overflow-hidden py-2.5 sm:py-3 px-4 sm:px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-6">
+      <div 
+        onClick={onOpenRegistrationModal}
+        className="bg-gradient-to-r from-[#45144A] via-[#652D6C] to-[#8F2D95] text-white border-t border-b border-white/10 shadow-sm overflow-hidden py-1.5 sm:py-2 px-2.5 sm:px-6 cursor-pointer"
+        title="Click to register for free medical camp"
+      >
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
           
-          {/* Scrolling Banner Text Ticker (Infinite Marquee) */}
-          <div className="w-full sm:flex-1 overflow-hidden relative mask-radial">
-            <div className="animate-marquee flex items-center gap-8 whitespace-nowrap">
+          {/* Scrolling Banner Text Ticker (Full-width on mobile) */}
+          <div className="flex-1 overflow-hidden relative mask-radial">
+            <div className="animate-marquee flex items-center gap-6 sm:gap-8 whitespace-nowrap">
               {/* Loop track 1 */}
-              <div className="flex items-center gap-4 shrink-0">
-                <span className="text-lg sm:text-xl lg:text-2xl font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
-                <span className="text-xs sm:text-sm lg:text-base font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-xs sm:text-sm lg:text-base inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
-                <span className="text-purple-100 font-medium text-xs sm:text-sm lg:text-base inline-flex items-center gap-1.5 bg-white/10 px-3 py-0.5 rounded-full border border-white/15">
-                  <MapPin className="w-3.5 h-3.5 text-pink-300 shrink-0" />
-                  <span>{t.nav.campLocation}</span>
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
+                <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
+                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
+                <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
+                  <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
+                  <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
+                </span>
+                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
+                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
+                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
-              <span className="text-yellow-400/60 font-bold text-lg">•</span>
+              <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
 
-              <div className="flex items-center gap-4 shrink-0">
-                <span className="text-lg sm:text-xl lg:text-2xl font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
-                <span className="text-xs sm:text-sm lg:text-base font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-xs sm:text-sm lg:text-base inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
-                <span className="text-purple-100 font-medium text-xs sm:text-sm lg:text-base inline-flex items-center gap-1.5 bg-white/10 px-3 py-0.5 rounded-full border border-white/15">
-                  <MapPin className="w-3.5 h-3.5 text-pink-300 shrink-0" />
-                  <span>{t.nav.campLocation}</span>
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
+                <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
+                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
+                <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
+                  <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
+                  <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
+                </span>
+                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
+                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
+                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
-              <span className="text-yellow-400/60 font-bold text-lg">•</span>
+              <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
 
-              {/* Loop track 2 (exact duplicate for seamless 0% -> -50% continuous loop) */}
-              <div className="flex items-center gap-4 shrink-0">
-                <span className="text-lg sm:text-xl lg:text-2xl font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
-                <span className="text-xs sm:text-sm lg:text-base font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-xs sm:text-sm lg:text-base inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
-                <span className="text-purple-100 font-medium text-xs sm:text-sm lg:text-base inline-flex items-center gap-1.5 bg-white/10 px-3 py-0.5 rounded-full border border-white/15">
-                  <MapPin className="w-3.5 h-3.5 text-pink-300 shrink-0" />
-                  <span>{t.nav.campLocation}</span>
+              {/* Loop track 2 */}
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
+                <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
+                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
+                <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
+                  <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
+                  <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
+                </span>
+                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
+                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
+                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
-              <span className="text-yellow-400/60 font-bold text-lg">•</span>
+              <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
 
-              <div className="flex items-center gap-4 shrink-0">
-                <span className="text-lg sm:text-xl lg:text-2xl font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
-                <span className="text-xs sm:text-sm lg:text-base font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-xs sm:text-sm lg:text-base inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
-                <span className="text-purple-100 font-medium text-xs sm:text-sm lg:text-base inline-flex items-center gap-1.5 bg-white/10 px-3 py-0.5 rounded-full border border-white/15">
-                  <MapPin className="w-3.5 h-3.5 text-pink-300 shrink-0" />
-                  <span>{t.nav.campLocation}</span>
+              <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+                <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
+                <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
+                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
+                <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
+                  <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
+                  <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
+                </span>
+                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
+                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
+                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
-              <span className="text-yellow-400/60 font-bold text-lg">•</span>
+              <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
             </div>
           </div>
 
-          {/* Right Side: Prominent Yellow CTA Button (Pinned) */}
-          <div className="w-full sm:w-auto flex justify-center sm:justify-end shrink-0 z-10">
+          {/* Right Side: Prominent Yellow CTA Button (Desktop & Tablet) */}
+          <div className="hidden sm:block shrink-0 z-10">
             <button
               onClick={onOpenRegistrationModal}
-              className="bg-[#FFCC00] hover:bg-[#FFD633] text-[#3D1443] font-extrabold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 shrink-0 group active:scale-95 border border-yellow-300/50 cursor-pointer w-full sm:w-auto text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl"
+              className="bg-[#FFCC00] hover:bg-[#FFD633] text-[#3D1443] font-extrabold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-1.5 shrink-0 group active:scale-95 border border-yellow-300/50 cursor-pointer text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 rounded-xl whitespace-nowrap"
             >
               <Calendar className="w-4 h-4 text-[#3D1443] shrink-0" />
               <span>{t.nav.topBannerButton}</span>
-              <ChevronRight className="w-4 h-4 text-[#3D1443] group-hover:translate-x-1 transition-transform shrink-0" />
+              <ChevronRight className="w-4 h-4 text-[#3D1443] group-hover:translate-x-0.5 transition-transform shrink-0" />
             </button>
           </div>
 

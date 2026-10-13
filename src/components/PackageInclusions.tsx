@@ -54,45 +54,45 @@ export const PackageInclusions: React.FC<PackageInclusionsProps> = ({ t }) => {
   };
 
   return (
-    <section id="inclusions" className="py-14 sm:py-20 bg-gradient-to-b from-[#FAF6FA] via-[#FAF3FB] to-[#FAF6FA] relative overflow-hidden">
+    <section id="inclusions" className="py-8 sm:py-16 lg:py-20 bg-gradient-to-b from-[#FAF6FA] via-[#FAF3FB] to-[#FAF6FA] relative overflow-hidden">
       {/* Background Subtle Ambient Glows */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#652D6C]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#9A389F]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-[#2A102D] tracking-tight">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A102D] tracking-tight">
             {t.inclusions.title}
           </h2>
 
           {t.inclusions.subtitle && (
-            <p className="text-xl sm:text-2xl text-[#652D6C] font-extrabold tracking-tight mt-2.5">
+            <p className="text-base sm:text-xl lg:text-2xl text-[#652D6C] font-extrabold tracking-tight mt-1.5 sm:mt-2.5">
               {t.inclusions.subtitle}
             </p>
           )}
         </div>
 
         {/* 8 Inclusions Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-5">
           {t.inclusions.items.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-5 border border-[#652D6C]/15 shadow-sm hover:shadow-lg hover:border-[#9A389F]/40 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-4 group"
+              className="bg-white rounded-xl sm:rounded-2xl p-3.5 sm:p-5 border border-[#652D6C]/15 shadow-xs hover:shadow-md hover:border-[#9A389F]/40 transition-all duration-300 flex items-center gap-3 sm:gap-4 group"
             >
               {/* Icon Container */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#FAF3FB] to-[#F5EAF7] border border-[#652D6C]/15 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 group-hover:bg-[#652D6C] group-hover:text-white transition-all">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-tr from-[#FAF3FB] to-[#F5EAF7] border border-[#652D6C]/15 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 group-hover:bg-[#652D6C] group-hover:text-white transition-all">
                 {getIcon(item.icon, idx)}
               </div>
 
               {/* Title & Checkmark */}
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-1.5 mb-1">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span className="text-[11px] font-extrabold text-emerald-700 uppercase tracking-wide">Included</span>
+                <div className="flex items-center gap-1.5 mb-0.5 sm:mb-1">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                  <span className="text-[10px] sm:text-[11px] font-extrabold text-emerald-700 uppercase tracking-wide">Included</span>
                 </div>
-                <h3 className="text-sm sm:text-base font-extrabold text-[#2A102D] group-hover:text-[#652D6C] transition-colors leading-snug break-words">
+                <h3 className="text-xs sm:text-sm lg:text-base font-extrabold text-[#2A102D] group-hover:text-[#652D6C] transition-colors leading-snug break-words">
                   {item.title}
                 </h3>
               </div>

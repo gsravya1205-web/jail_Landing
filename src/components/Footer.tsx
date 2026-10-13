@@ -7,31 +7,31 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ t }) => {
-  const mapDirectionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Medcy+IVF+Plot+9A+Health+City+Arilova+Visakhapatnam+530040&dir_action=navigate";
+  const mapDirectionsUrl = "https://www.google.com/maps/dir/?api=1&destination=Vizag+IVF+Centre+Jail+Road+Opp+Veterinary+Hospital+Visakhapatnam+530020&dir_action=navigate";
 
   return (
-    <footer className="bg-gradient-to-b from-[#4D1F53] to-[#2A102D] text-white pt-16 pb-12 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <footer className="bg-gradient-to-b from-[#4D1F53] to-[#2A102D] text-white pt-10 sm:pt-16 pb-28 lg:pb-12 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-12 border-b border-white/15">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-8 sm:pb-12 border-b border-white/15">
           
           {/* Brand & About */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-3.5 sm:space-y-4">
             {/* Brand Logos with white background */}
-            <div className="inline-flex items-center gap-3 bg-white px-3.5 py-2 rounded-xl">
+            <div className="inline-flex items-center gap-2.5 sm:gap-3 bg-white px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl">
               <a href="#" className="focus:outline-none hover:opacity-95 transition-opacity">
                 <img 
                   src="/medcy-logo.png" 
                   alt="Medcy IVF Logo" 
-                  className="h-8 sm:h-10 w-auto object-contain" 
+                  className="h-7 sm:h-9 w-auto object-contain" 
                 />
               </a>
-              <span className="h-6 w-px bg-gray-300" aria-hidden="true"></span>
+              <span className="h-5 sm:h-6 w-px bg-gray-300" aria-hidden="true"></span>
               <a href="#" className="focus:outline-none hover:opacity-95 transition-opacity">
                 <img 
                   src="/vizag-ivf-logo.png" 
-                  alt="Vizag IVF Centre Gajuwaka Logo" 
-                  className="h-8 sm:h-10 w-auto object-contain" 
+                  alt="Vizag IVF Centre Jail Road Logo" 
+                  className="h-7 sm:h-9 w-auto object-contain" 
                 />
               </a>
             </div>
@@ -42,56 +42,56 @@ export const Footer: React.FC<FooterProps> = ({ t }) => {
           </div>
 
           {/* Location & Contact Info */}
-          <div className="lg:col-span-4 space-y-4">
-            <h4 className="text-base font-extrabold text-white border-l-4 border-[#9A389F] pl-3">
+          <div className="lg:col-span-4 space-y-3.5 sm:space-y-4">
+            <h4 className="text-sm sm:text-base font-extrabold text-white border-l-4 border-[#9A389F] pl-3">
               {t.footer.addressTitle}
             </h4>
 
-            <ul className="space-y-3.5 text-xs sm:text-sm text-purple-200/90 font-medium">
-              <li className="flex items-start gap-3 group">
-                <MapPin className="w-5 h-5 text-[#9A389F] shrink-0 mt-0.5" />
+            <ul className="space-y-3 sm:space-y-3.5 text-xs sm:text-sm text-purple-200/90 font-medium">
+              <li className="flex items-start gap-2.5 sm:gap-3 group">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#9A389F] shrink-0 mt-0.5" />
                 <a 
                   href={mapDirectionsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-yellow-300 transition-colors font-medium underline-offset-4 hover:underline"
+                  className="hover:text-yellow-300 transition-colors font-medium underline-offset-4 hover:underline leading-relaxed"
                   title="Click to navigate on Google Maps"
                 >
                   {t.footer.addressValue}
                 </a>
               </li>
 
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#9A389F] shrink-0" />
+              <li className="flex items-center gap-2.5 sm:gap-3">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#9A389F] shrink-0" />
                 <a href="tel:+919502534222" className="hover:text-white font-bold transition-colors">
                   {t.footer.phoneValue}
                 </a>
               </li>
 
-              <li className="flex items-center gap-3">
-                <Clock className="w-5 h-5 text-[#9A389F] shrink-0" />
+              <li className="flex items-center gap-2.5 sm:gap-3">
+                <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#9A389F] shrink-0" />
                 <span>{t.footer.hoursValue}</span>
               </li>
             </ul>
           </div>
 
-          {/* Interactive Vizag Health City Map (Clicking ANY side opens Google Maps) */}
+          {/* Interactive Jail Road Map */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-base font-extrabold text-white border-l-4 border-[#9A389F] pl-3">
-              Location Map (Arilova Health City)
+            <h4 className="text-sm sm:text-base font-extrabold text-white border-l-4 border-[#9A389F] pl-3">
+              Location Map (Jail Road, Visakhapatnam)
             </h4>
 
             <a
               href={mapDirectionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block relative w-full h-44 rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl group cursor-pointer"
-              title="Click anywhere on map to open Google Maps navigation to Medcy IVF"
+              className="block relative w-full h-40 sm:h-44 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/20 shadow-xl group cursor-pointer"
+              title="Click anywhere on map to open Google Maps navigation to Jail Road Centre"
             >
               {/* Map Iframe */}
               <iframe
-                title="Medcy IVF Visakhapatnam Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.0768912845!2d83.3325!3d17.7650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395b28d0000001%3A0x6b4a3a60e0a5c4d2!2sHealth%20City%2C%20Arilova%2C%20Visakhapatnam!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="Vizag IVF Centre Jail Road Visakhapatnam Location"
+                src="https://maps.google.com/maps?q=Vizag+IVF+Centre,+Jail+Road,+Opposite+Veterinary+Hospital,+Visakhapatnam,+Andhra+Pradesh+530020&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -102,7 +102,7 @@ export const Footer: React.FC<FooterProps> = ({ t }) => {
               />
 
               {/* View on Google Maps Overlay Badge */}
-              <div className="absolute bottom-3 right-3 bg-[#652D6C] group-hover:bg-[#9A389F] text-white px-3.5 py-1.5 rounded-full text-xs font-bold shadow-xl flex items-center gap-1.5 transition-all z-10 border border-white/20">
+              <div className="absolute bottom-2.5 right-2.5 sm:bottom-3 sm:right-3 bg-[#652D6C] group-hover:bg-[#9A389F] text-white px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold shadow-xl flex items-center gap-1.5 transition-all z-10 border border-white/20">
                 <span>Open in Google Maps</span>
                 <ExternalLink className="w-3 h-3 text-purple-200" />
               </div>
@@ -112,7 +112,7 @@ export const Footer: React.FC<FooterProps> = ({ t }) => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 text-center text-xs text-purple-300/70 font-medium">
+        <div className="pt-6 sm:pt-8 text-center text-xs text-purple-300/70 font-medium">
           <p>{t.footer.copyright}</p>
         </div>
 
