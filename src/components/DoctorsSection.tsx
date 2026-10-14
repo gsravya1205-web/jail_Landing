@@ -41,9 +41,6 @@ export const DoctorsSection: React.FC<DoctorsSectionProps> = ({ t, onDoctorClick
                       src={doctor.photo}
                       alt={doctor.name}
                       className="w-full h-full object-cover object-top rounded-lg sm:rounded-xl bg-white"
-                      onError={(e) => {
-                        (e.target as HTMLElement).setAttribute('src', '/dr-mounica.png');
-                      }}
                     />
                   </div>
 

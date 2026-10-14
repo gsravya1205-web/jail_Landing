@@ -30,8 +30,8 @@ export interface Translation {
     locationBadge: string;
     offerBadge: string;
     offerText: string;
-    offerOriginalPrice: string;
-    offerSaveTag: string;
+    offerOriginalPrice?: string;
+    offerSaveTag?: string;
     offerNote: string;
     srikakulamOffer: string;
     keyPoints: string[];
@@ -77,6 +77,23 @@ export interface Translation {
       featured: boolean;
     }[];
     disclaimer: string;
+  };
+  reviews: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    rating: string;
+    reviewCount: string;
+    googleSearchUrl: string;
+    viewAllButton: string;
+    verifiedBadge: string;
+    list: {
+      name: string;
+      rating: number;
+      date: string;
+      comment: string;
+      initials: string;
+    }[];
   };
   doctors: {
     badge: string;
@@ -144,7 +161,7 @@ export interface Translation {
 export const translations: Record<Language, Translation> = {
   te: {
     nav: {
-      brandName: "మెడ్సీ IVF",
+      brandName: "వైజాగ్ IVF సెంటర్",
       tagline: "MIRACLES MADE HERE",
       freeCampBadge: "ఉచిత మెడికల్ క్యాంప్",
       phone: "+91 95025 34222",
@@ -159,22 +176,22 @@ export const translations: Record<Language, Translation> = {
       topBannerButton: "మీ ఉచిత స్లాట్‌ను బుక్ చేసుకోండి",
       campFormTitle: "ఉచిత మెడికల్ క్యాంప్ రిజిస్ట్రేషన్",
       campFormSubtitle: "ఉచిత నిపుణుల సంప్రదింపుల కోసం మీ ఉచిత స్లాట్‌ను ఇప్పుడే బుక్ చేసుకోండి",
-      campLocation: "వైజాగ్ IVF సెంటర్ / మెడ్సీ IVF, #29-2-4, 1వ అంతస్తు, వద్దిరాజు నిలయం, జైల్ రోడ్, వెటర్నరీ హాస్పిటల్ ఎదురుగా, విశాఖపట్నం – 530020"
+      campLocation: "వైజాగ్ IVF సెంటర్, #29-2-4, 1వ అంతస్తు, వద్దిరాజు నిలయం, జైల్ రోడ్, వెటర్నరీ హాస్పిటల్ ఎదురుగా, విశాఖపట్నం – 530020"
     },
     hero: {
       badge: "",
-      brandTag: "MEDCY IVF",
+      brandTag: "VIZAG IVF",
       headlinePart1: "8,000+ కుటుంబాలు మాతో ఎదిగాయి.",
       headlineHighlight: "మీ కుటుంబం కూడా!",
       headlinePart2: "",
       tagline: "అత్యుత్తమ ఫెర్టిలిటీ సంరక్షణ. తల్లిదండ్రులు కావాలనే మీ ప్రయాణం ఇక్కడే మొదలవుతుంది.",
-      subtext: "రుజువైన విజయవంతమైన రేట్లు, అగ్రశ్రేణి సంతానలేమి నిపుణులు మరియు అందుబాటు ధరల సంపూర్ణ చికిత్సా ప్రణాళికల కోసం మెడ్సీని ఎంచుకోండి. ఎటువంటి దాగి ఉన్న రుసుములు లేదా రిజిస్ట్రేషన్ ఛార్జీలు లేవు — మీరు తల్లిదండ్రులు కావడానికి తోడ్పడే నిజమైన నిపుణుల సంరక్షణ మాత్రమే.",
+      subtext: "రుజువైన విజయవంతమైన రేట్లు, అగ్రశ్రేణి సంతానలేమి నిపుణులు మరియు అందుబాటు ధరల సంపూర్ణ చికిత్సా ప్రణాళికల కోసం వైజాగ్ IVF సెంటర్‌ని ఎంచుకోండి. ఎటువంటి దాగి ఉన్న రుసుములు లేదా రిజిస్ట్రేషన్ ఛార్జీలు లేవు — మీరు తల్లిదండ్రులు కావడానికి తోడ్పడే నిజమైన నిపుణుల సంరక్షణ మాత్రమే.",
       locationBadge: "జైల్ రోడ్, విశాఖపట్నం",
-      offerBadge: "SPECIAL DISCOUNT PACKAGE OFFER",
-      offerText: "IVF చికిత్స కేవలం ₹1.8 లక్షలకే!",
-      offerOriginalPrice: "సాధారణ మార్కెట్ ధర: ₹1.9 లక్షలు",
-      offerSaveTag: "రూ. 10,000 వర్సెస్ ₹1.9L తక్షణ ఆదా!",
-      offerNote: "గమనిక: బయట క్లినిక్‌లలో రూ. 1.9L ఉండే ప్యాకేజీని మెడ్సీ IVF ప్రత్యేక డిస్కౌంట్ ఆఫర్‌తో రూ. 1.8L కే అందిస్తోంది.",
+      offerBadge: "వైజాగ్ IVF చికిత్స",
+      offerText: "IVF Packages starting from 1.8* lakhs onwards",
+      offerOriginalPrice: "",
+      offerSaveTag: "",
+      offerNote: "*final amount may vary from patient to patient",
       srikakulamOffer: "శ్రీకాకుళం బ్రాంచ్‌లో సంపూర్ణ IVF చికిత్స కేవలం ₹1.5 లక్షలకే!",
       keyPoints: [
         "ఉచిత నిపుణుల సంప్రదింపులు",
@@ -199,7 +216,7 @@ export const translations: Record<Language, Translation> = {
     stats: {
       cases: "8,000+",
       casesLabel: "విజయవంతమైన కేసులు",
-      startingPrice: "₹1.8L",
+      startingPrice: "₹1.8L*",
       startingPriceLabel: "IVF ప్యాకేజ్ ప్రారంభం",
       successRate: "ఉచితం",
       successRateLabel: "సంప్రదింపులు & కౌన్సెలింగ్"
@@ -255,7 +272,7 @@ export const translations: Record<Language, Translation> = {
       packages: [
         {
           name: "IVF / ICSI సంపూర్ణ ప్యాకేజ్",
-          price: "₹1.8 లక్షలు",
+          price: "₹1.8 లక్షలు*",
           subnote: "అన్ని రకాల పరీక్షలు, OT, ఇంజెక్షన్లు & 6 నెలల ఫ్రీజింగ్‌తో",
           highlights: ["IVF ప్రొఫైలింగ్ & స్కాన్లు", "స్టిమ్యులేషన్ & ట్రిగ్గర్ షాట్", "Embryo ట్రాన్స్‌ఫర్ & ఫ్రీజింగ్", "Semen Backup చేర్చబడింది"],
           featured: true
@@ -275,13 +292,63 @@ export const translations: Record<Language, Translation> = {
           featured: false
         }
       ],
-      disclaimer: "గమనిక: రోగి ఆరోగ్య స్థితి మరియు వైద్యుల నివేదికల ఆధారంగా ఛార్జీలలో స్వల్ప మార్పులు ఉండవచ్చు."
+      disclaimer: "*రోగి ఆరోగ్య స్థితి మరియు వైద్యుల నివేదికల ఆధారంగా ఛార్జీలలో స్వల్ప మార్పులు ఉండవచ్చు."
+    },
+    reviews: {
+      badge: "GOOGLE REVIEWS",
+      title: "మా పేషెంట్ల నిజమైన అనుభవాలు",
+      subtitle: "వైజాగ్ IVF సెంటర్ జైల్ రోడ్ బ్రాంచ్‌లో చికిత్స పొందిన దంపతులు గూగుల్‌లో పంచుకున్న అనుభవాలు",
+      rating: "4.8",
+      reviewCount: "483 Google Reviews",
+      googleSearchUrl: "https://www.google.com/search?q=vizag+ivf+jail+road&rlz=1C1CHZN_enIN1233IN1233&oq=vizag+ivf+jail&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRiPAjIHCAQQIRiPAtIBCDUxNjBqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8",
+      viewAllButton: "గూగుల్‌లో మొత్తం 483+ రివ్యూలు చూడండి",
+      verifiedBadge: "Verified Patient",
+      list: [
+        {
+          name: "Sravani K.",
+          rating: 5,
+          date: "a month ago",
+          comment: "Dr. Sireesha Rani madam is an exceptional doctor. Her polite nature and deep expertise gave us immense confidence during our IVF journey. The nursing staff and coordinators at Jail Road centre are very caring and supportive. Blessed with positive results in our first attempt!",
+          initials: "SK"
+        },
+        {
+          name: "Prasad Varma",
+          rating: 5,
+          date: "2 months ago",
+          comment: "Best IVF Centre in Visakhapatnam. Dr. Sireesha madam explains everything clearly without keeping any doubts. The hospital atmosphere is very peaceful and clean. We are truly thankful to the whole Vizag IVF team for making our dream come true.",
+          initials: "PV"
+        },
+        {
+          name: "M. Lavanya",
+          rating: 5,
+          date: "3 months ago",
+          comment: "After 7 years of marriage and facing disappointment elsewhere, we consulted Dr. Sireesha Rani at Vizag IVF Center Jail Road. Mam's positive counseling and advanced treatment gave us hope. Today we are blessed with twin babies! Highly recommend this hospital.",
+          initials: "ML"
+        },
+        {
+          name: "Ramesh Kumar B.",
+          rating: 5,
+          date: "4 months ago",
+          comment: "Very transparent treatment and highly skilled doctors. Dr. Sireesha Rani and Dr. Mounica take personal care of every patient. Staff are cooperative during scans and appointments. Truly grateful to Vizag IVF Centre.",
+          initials: "RB"
+        }
+      ]
     },
     doctors: {
-      badge: "మా స్పెషలిస్ట్ డాక్టర్",
-      title: "మా ఫెర్టిలిటీ నిపుణులు",
-      subtitle: "IVF, IUI, ICSI మరియు రీప్రొడక్టివ్ మెడిసిన్‌లో 11+ సంవత్సరాల అనుభవం కలిగిన ప్రముఖ సంతానలేమి వైద్యురాలు.",
+      badge: "మా స్పెషలిస్ట్ వైద్యులు",
+      title: "మా ప్రముఖ సంతానలేమి నిపుణులు",
+      subtitle: "దశాబ్దాల క్లినికల్ నైపుణ్యం మరియు అంతర్జాతీయ శిక్షణతో దంపతులకు ఆశాకిరణంగా నిలుస్తున్న మా వైద్య బృందం.",
       list: [
+        {
+          id: "dr-sireesha",
+          name: "డా. బి. శిరీష రాణి",
+          title: "ఫౌండర్ & చీఫ్ ఇన్ఫెర్టిలిటీ స్పెషలిస్ట్ | గైనకాలజిస్ట్",
+          qualifications: "MBBS, DNB (Obstetrics & Gynaecology), DRM (కీల్ యూనివర్సిటీ, జర్మనీ)",
+          expBadge: "20+ YEARS EXP",
+          photo: "/dr-sireesha-rani.png",
+          bio: "వైజాగ్ IVF సెంటర్ వ్యవస్థాపకురాలు మరియు మేనేజింగ్ డైరెక్టర్. 20+ సంవత్సరాల అనుభవం కలిగిన ప్రముఖ సంతానలేమి వైద్యురాలు. గౌరవనీయ మాజీ ఉపరాష్ట్రపతి గారి చేతుల మీదుగా 'మోస్ట్ ప్రిఫర్డ్ IVF డాక్టర్ ఇన్ AP' పురస్కారం పొందిన ఘనత.",
+          achievementBadge: "Most Preferred IVF Doctor in AP"
+        },
         {
           id: "dr-mounica",
           name: "డా. మౌనిక",
@@ -362,7 +429,7 @@ export const translations: Record<Language, Translation> = {
       phoneValue: "+91 95025 34222",
       hoursTitle: "పని చేయు సమయాలు",
       hoursValue: "సోమవారం - ఆదివారం: ఉదయం 9:00 - సాయంత్రం 6:00",
-      copyright: "© 2026 MEDCY IVF & వైజాగ్ IVF సెంటర్. సర్వ హక్కులూ ప్రత్యేకించబడ్డాయి."
+      copyright: "© 2026 వైజాగ్ IVF సెంటర్. సర్వ హక్కులూ ప్రత్యేకించబడ్డాయి."
     },
     modal: {
       title: "అపాయింట్మెంట్ నమోదైంది! 🎉",
@@ -379,7 +446,7 @@ export const translations: Record<Language, Translation> = {
   },
   en: {
     nav: {
-      brandName: "MEDCY IVF",
+      brandName: "VIZAG IVF CENTRE",
       tagline: "MIRACLES MADE HERE",
       freeCampBadge: "FREE MEDICAL CAMP",
       phone: "+91 95025 34222",
@@ -394,22 +461,22 @@ export const translations: Record<Language, Translation> = {
       topBannerButton: "Book Your Free Slot Today",
       campFormTitle: "Free Medical Camp Registration",
       campFormSubtitle: "Book your complimentary slot for a free expert fertility consultation",
-      campLocation: "Vizag IVF Centre / Medcy IVF, #29-2-4, 1st Floor, Vaddiraju Nilayam, Jail Road, Opp. Veterinary Hospital, Visakhapatnam – 530020"
+      campLocation: "Vizag IVF Centre, #29-2-4, 1st Floor, Vaddiraju Nilayam, Jail Road, Opp. Veterinary Hospital, Visakhapatnam – 530020"
     },
     hero: {
       badge: "",
-      brandTag: "MEDCY IVF",
+      brandTag: "VIZAG IVF",
       headlinePart1: "8,000+ Families Grew With Us.",
       headlineHighlight: "Yours Can Too.",
       headlinePart2: "",
       tagline: "Expert fertility care. Your journey to parenthood starts here.",
-      subtext: "Choose Medcy for proven success rates, top-tier fertility specialists, and highly affordable, all-inclusive treatment plans. No hidden fees, no registration charges—just genuine, expert care to help you become parents.",
+      subtext: "Choose Vizag IVF Centre for proven success rates, top-tier fertility specialists, and highly affordable, all-inclusive treatment plans. No hidden fees, no registration charges—just genuine, expert care to help you become parents.",
       locationBadge: "Jail Road, Visakhapatnam",
-      offerBadge: "SPECIAL DISCOUNT PACKAGE OFFER",
-      offerText: "IVF TREATMENT AT ₹1.8 LAKHS ONLY",
-      offerOriginalPrice: "Standard Market Price: ₹1.9 Lakhs",
-      offerSaveTag: "SAVE ₹10,000 VS REGULAR ₹1.9L!",
-      offerNote: "Note: Standard market clinics charge ₹1.9 Lakhs — Medcy IVF provides complete treatment package at ₹1.8 Lakhs.",
+      offerBadge: "VIZAG IVF TREATMENT",
+      offerText: "IVF Packages starting from 1.8* lakhs onwards",
+      offerOriginalPrice: "",
+      offerSaveTag: "",
+      offerNote: "*final amount may vary from patient to patient",
       srikakulamOffer: "In Srikakulam Branch, Complete IVF Treatment at ₹1.5 Lakhs Only",
       keyPoints: [
         "Free Expert Consultation",
@@ -434,7 +501,7 @@ export const translations: Record<Language, Translation> = {
     stats: {
       cases: "8,000+",
       casesLabel: "Successful Cases",
-      startingPrice: "₹1.8L",
+      startingPrice: "₹1.8L*",
       startingPriceLabel: "Starting IVF Package",
       successRate: "FREE",
       successRateLabel: "Consultation & Counselling"
@@ -490,7 +557,7 @@ export const translations: Record<Language, Translation> = {
       packages: [
         {
           name: "All-Inclusive IVF / ICSI Package",
-          price: "₹1.8 Lakhs",
+          price: "₹1.8 Lakhs*",
           subnote: "Includes tests, scans, injections, OT, ET & 6 months freezing",
           highlights: ["Profiling Tests & Scans", "Stimulation & Trigger Shot", "Embryo Transfer & Freezing", "Semen Backup Included"],
           featured: true
@@ -510,13 +577,63 @@ export const translations: Record<Language, Translation> = {
           featured: false
         }
       ],
-      disclaimer: "Note: Treatment fees may vary slightly depending on individualized clinical evaluation."
+      disclaimer: "*Treatment fees may vary slightly depending on individualized clinical evaluation."
+    },
+    reviews: {
+      badge: "GOOGLE REVIEWS",
+      title: "What Our Patients Say",
+      subtitle: "Authentic reviews from couples who achieved their dream of parenthood at Vizag IVF Centre Jail Road",
+      rating: "4.8",
+      reviewCount: "483 Google reviews",
+      googleSearchUrl: "https://www.google.com/search?q=vizag+ivf+jail+road&rlz=1C1CHZN_enIN1233IN1233&oq=vizag+ivf+jail&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRiPAjIHCAQQIRiPAtIBCDUxNjBqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8",
+      viewAllButton: "Read all 483+ Google Reviews",
+      verifiedBadge: "Verified Patient",
+      list: [
+        {
+          name: "Sravani K.",
+          rating: 5,
+          date: "a month ago",
+          comment: "Dr. Sireesha Rani mam is an exceptional doctor. Her polite nature and deep expertise gave us immense confidence during our IVF journey. The nursing staff and coordinators at Jail Road centre are very caring and supportive. Blessed with positive results in our first attempt!",
+          initials: "SK"
+        },
+        {
+          name: "Prasad Varma",
+          rating: 5,
+          date: "2 months ago",
+          comment: "Best IVF Centre in Visakhapatnam. Dr. Sireesha madam explains everything clearly without keeping any doubts. The hospital atmosphere is very peaceful and clean. We are truly thankful to the whole Vizag IVF team for making our dream come true.",
+          initials: "PV"
+        },
+        {
+          name: "M. Lavanya",
+          rating: 5,
+          date: "3 months ago",
+          comment: "After 7 years of marriage and facing disappointment elsewhere, we consulted Dr. Sireesha Rani at Vizag IVF Center Jail Road. Mam's positive counseling and advanced treatment gave us hope. Today we are blessed with twin babies! Highly recommend this hospital.",
+          initials: "ML"
+        },
+        {
+          name: "Ramesh Kumar B.",
+          rating: 5,
+          date: "4 months ago",
+          comment: "Very transparent treatment and highly skilled doctors. Dr. Sireesha Rani and Dr. Mounica take personal care of every patient. Staff are cooperative during scans and appointments. Truly grateful to Vizag IVF Centre.",
+          initials: "RB"
+        }
+      ]
     },
     doctors: {
-      badge: "MEET THE EXPERT",
-      title: "Meet the Expert",
+      badge: "OUR SPECIALISTS",
+      title: "Meet Our Fertility Specialists",
       subtitle: "Trusted medical leadership providing personalized care in IVF, IUI, ICSI, and reproductive medicine.",
       list: [
+        {
+          id: "dr-sireesha",
+          name: "Dr. B. Sireesha Rani",
+          title: "Founder & Chief Fertility Specialist | Gynecologist",
+          qualifications: "MBBS, DNB (Obstetrics & Gynaecology), DRM (Kiel University, Germany)",
+          expBadge: "20+ YEARS EXP",
+          photo: "/dr-sireesha-rani.png",
+          bio: "Founder and Managing Director of Vizag IVF Centre with over 20 years of clinical mastery in reproductive medicine. Honored with the prestigious 'Most Preferred IVF Doctor in AP' award by the former Vice President of India.",
+          achievementBadge: "Most Preferred IVF Doctor in AP"
+        },
         {
           id: "dr-mounica",
           name: "Dr. Mounica",
@@ -530,7 +647,7 @@ export const translations: Record<Language, Translation> = {
       ]
     },
     whyChoose: {
-      title: "Why Choose Medcy",
+      title: "Why Choose Vizag IVF",
       items: [
         {
           number: "1",
@@ -589,7 +706,7 @@ export const translations: Record<Language, Translation> = {
       ]
     },
     footer: {
-      aboutTitle: "MEDCY IVF & Vizag IVF Centre",
+      aboutTitle: "VIZAG IVF CENTRE",
       aboutText: "Visakhapatnam's premier fertility & reproductive medicine institute on Jail Road with 8,000+ successful IVF cases.",
       addressTitle: "Centre Address",
       addressValue: "#29-2-4, 1st Floor, Vaddiraju Nilayam, Jail Road, Opp. Veterinary Hospital, Visakhapatnam – 530020",
@@ -597,11 +714,11 @@ export const translations: Record<Language, Translation> = {
       phoneValue: "+91 95025 34222",
       hoursTitle: "Working Hours",
       hoursValue: "Mon - Sun: 9:00 AM - 6:00 PM",
-      copyright: "© 2026 MEDCY IVF & Vizag IVF Centre. All rights reserved."
+      copyright: "© 2026 VIZAG IVF CENTRE. All rights reserved."
     },
     modal: {
       title: "Appointment Reserved! 🎉",
-      subtitle: "Your registration for Medcy IVF Free Medical Camp is confirmed.",
+      subtitle: "Your registration for Vizag IVF Free Medical Camp is confirmed.",
       tokenLabel: "Booking Token No.",
       nameLabel: "Name",
       phoneLabel: "Phone",

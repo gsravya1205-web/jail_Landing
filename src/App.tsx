@@ -3,6 +3,7 @@ import { Language, translations } from './data/translations';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PackageInclusions } from './components/PackageInclusions';
+import { GoogleReviews } from './components/GoogleReviews';
 import { DoctorsSection } from './components/DoctorsSection';
 import { Footer } from './components/Footer';
 import { BookingModal } from './components/BookingModal';
@@ -59,7 +60,12 @@ export function App() {
           onBookClick={handleBookClick} 
         />
 
-        {/* 3. Meet the Expert Section (Dr. Mounica) */}
+        {/* 3. Google Reviews Section (4.8 Stars, 483 Reviews) */}
+        <GoogleReviews 
+          t={t} 
+        />
+
+        {/* 4. Meet Our Specialists (Dr. Sireesha & Dr. Mounica) */}
         <DoctorsSection 
           t={t} 
           onDoctorClick={handleBookClick} 
