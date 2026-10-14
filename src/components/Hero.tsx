@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, CheckCircle2, User, Phone, ChevronRight, Award, Heart, Star, ShieldCheck, Tag } from 'lucide-react';
+import { Calendar, MapPin, User, Phone, ChevronRight, Award, Heart, Star, ShieldCheck, Tag } from 'lucide-react';
 import { Translation } from '../data/translations';
 
 interface HeroProps {
@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ t, onFormSubmit }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-6 sm:gap-8 lg:gap-10 xl:gap-14">
           
           {/* Left Column: Headlines & Discount Offer */}
-          <div className="space-y-3.5 sm:space-y-5 lg:col-span-7 order-1 lg:order-1">
+          <div className="space-y-3.5 sm:space-y-5 lg:col-span-7 order-2 lg:order-1">
             
             {/* Brand Eyebrow: MEDCY IVF (Poppins SemiBold) */}
             {t.hero.brandTag && (
@@ -73,19 +73,6 @@ export const Hero: React.FC<HeroProps> = ({ t, onFormSubmit }) => {
             <p className="text-xs sm:text-sm lg:text-base text-[#56335B] leading-relaxed max-w-2xl font-medium">
               {t.hero.subtext}
             </p>
-
-            {/* 3 Key Badges / Trust Highlights */}
-            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5 pb-0.5">
-              {t.hero.keyPoints.map((point, idx) => (
-                <div 
-                  key={idx}
-                  className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-white/95 border border-[#652D6C]/15 shadow-xs text-[11px] sm:text-xs font-bold text-[#3D1443]"
-                >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span>{point}</span>
-                </div>
-              ))}
-            </div>
 
             {/* Special Discount Offer Card comparing 1.9L vs 1.8L */}
             <div className="text-white shadow-lg sm:shadow-xl relative overflow-hidden border border-yellow-300/40 bg-gradient-to-r from-[#4A164E] via-[#652D6C] to-[#8F2D95] p-3.5 sm:p-5 rounded-xl sm:rounded-2xl">
@@ -124,7 +111,7 @@ export const Hero: React.FC<HeroProps> = ({ t, onFormSubmit }) => {
           </div>
 
           {/* Right Column: Registration Form */}
-          <div id="booking-form" className="lg:col-span-5 order-2 lg:order-2">
+          <div id="booking-form" className="lg:col-span-5 order-1 lg:order-2">
             <div className="bg-white relative shadow-xl border border-[#652D6C]/20 p-4 sm:p-7 sm:pt-8 sm:pb-9 lg:p-8 rounded-2xl sm:rounded-3xl">
               
               {/* Form Header */}

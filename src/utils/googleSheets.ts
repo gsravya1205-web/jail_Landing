@@ -1,7 +1,5 @@
-// Google Sheets Integration Utility
-// Enter your published Google Apps Script Web App URL below or set VITE_GOOGLE_SCRIPT_URL in .env file
-
-export const GOOGLE_SCRIPT_URL = (import.meta as any).env?.VITE_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbwBHVBula5IBsiHBPcwuU6BfSqcsgAVcWfPV5PnRyQ9ioXbEOn_xSXsTWL_y8RnLUxNmA/exec';
+// Google Sheets Integration Utility - Hardcoded Web App Deployment URL
+export const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzlOWqPbjCsu8oLAqr1zSNqQWKDiwMcuSUkexOtNf-ebMk8inZbp27a73X7HBJiTgDaAA/exec';
 
 export interface FormSubmissionData {
   name: string;
@@ -19,7 +17,7 @@ export async function sendToGoogleSheet(data: FormSubmissionData): Promise<boole
   const scriptUrl = GOOGLE_SCRIPT_URL;
 
   if (!scriptUrl) {
-    console.log('Google Script URL is not configured yet. Form submission data:', data);
+    console.warn('Google Script URL is not configured yet. Form submission data:', data);
     return false;
   }
 
@@ -34,19 +32,20 @@ export async function sendToGoogleSheet(data: FormSubmissionData): Promise<boole
       formSource: data.formSource || 'General Consultation Registration'
     };
 
-    // Send payload using no-cors mode to bypass CORS restriction in browser for Apps Script
+    // Use mode: 'no-cors' with 'text/plain' to avoid CORS preflight failures in Google Apps Script
     await fetch(scriptUrl, {
       method: 'POST',
       mode: 'no-cors',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain;charset=utf-8',
       },
       body: JSON.stringify(payload),
     });
 
+    console.log('✅ Consultation lead sent to Google Sheets successfully:', payload);
     return true;
   } catch (error) {
-    console.error('Error submitting form data to Google Sheets:', error);
+    console.error('❌ Error submitting form data to Google Sheets:', error);
     return false;
   }
 }

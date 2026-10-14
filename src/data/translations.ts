@@ -429,7 +429,7 @@ export const translations: Record<Language, Translation> = {
       slotOptions: ["10:00 AM - 07:00 PM", "10:00 AM - 01:00 PM", "01:00 PM - 04:00 PM", "04:00 PM - 07:00 PM"],
       submitButton: "Confirm Booking",
       submitting: "Submitting...",
-      privacyNote: "🔒 Your personal information is strictly confidential."
+      privacyNote: "Your personal information is strictly confidential."
     },
     stats: {
       cases: "8,000+",

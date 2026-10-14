@@ -54,7 +54,7 @@ export const PackageInclusions: React.FC<PackageInclusionsProps> = ({ t }) => {
   };
 
   return (
-    <section id="inclusions" className="py-8 sm:py-16 lg:py-20 bg-gradient-to-b from-[#FAF6FA] via-[#FAF3FB] to-[#FAF6FA] relative overflow-hidden">
+    <section id="inclusions" className="pt-8 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 lg:pb-10 bg-gradient-to-b from-[#FAF6FA] via-[#FAF3FB] to-[#FAF6FA] relative overflow-hidden">
       {/* Background Subtle Ambient Glows */}
       <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#652D6C]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-[#9A389F]/5 rounded-full blur-3xl pointer-events-none" />

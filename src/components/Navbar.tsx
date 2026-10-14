@@ -35,12 +35,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
         </div>
 
         {/* Action Controls */}
-        <div className="flex items-center gap-1.5 sm:gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Language Toggle Button (EN 1st default, TE option) */}
           <div className="flex items-center bg-[#FAF6FA] border border-[#652D6C]/25 rounded-full p-0.5 sm:p-1 shadow-inner shrink-0">
             <button
               onClick={() => setLang('en')}
-              className={`px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
+              className={`px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
                 lang === 'en'
                   ? 'bg-[#652D6C] text-white shadow-sm'
                   : 'text-[#56335B] hover:text-[#652D6C]'
@@ -51,7 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
             </button>
             <button
               onClick={() => setLang('te')}
-              className={`px-2 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
+              className={`px-2.5 sm:px-3 py-1 text-[11px] sm:text-xs font-bold rounded-full transition-all flex items-center gap-1 cursor-pointer ${
                 lang === 'te'
                   ? 'bg-[#652D6C] text-white shadow-sm'
                   : 'text-[#56335B] hover:text-[#652D6C]'
@@ -71,10 +71,10 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
             <span>{t.nav.phone}</span>
           </a>
 
-          {/* Book Appointment CTA Button (Visible on sm/tablet/desktop, hidden on mobile to prevent clipping) */}
+          {/* Book Appointment CTA Button (Hidden on mobile, visible on sm/tablet/desktop) */}
           <button
             onClick={onBookClick}
-            className="hidden sm:flex btn-primary-purple px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs lg:text-sm font-bold items-center gap-2 shadow-md shrink-0 cursor-pointer active:scale-95 transition-all"
+            className="hidden sm:flex btn-primary-purple px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs lg:text-sm font-bold items-center gap-2 shadow-md shrink-0 cursor-pointer active:scale-95 transition-all whitespace-nowrap"
           >
             <Calendar className="w-4 h-4 text-pink-300 shrink-0" />
             <span>{t.nav.bookAppointment}</span>
@@ -97,14 +97,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
               <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                 <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
                 <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
                 <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
                   <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
                   <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
-                </span>
-                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
-                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
-                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
               <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
@@ -112,14 +107,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
               <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                 <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
                 <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
                 <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
                   <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
                   <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
-                </span>
-                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
-                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
-                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
               <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
@@ -128,14 +118,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
               <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                 <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
                 <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
                 <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
                   <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
                   <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
-                </span>
-                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
-                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
-                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
               <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
@@ -143,14 +128,9 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, t, onBookClick, o
               <div className="flex items-center gap-3 sm:gap-4 shrink-0">
                 <span className="text-xs sm:text-base lg:text-lg font-extrabold text-[#FFCC00] tracking-tight">{t.nav.freeCampBadge}</span>
                 <span className="text-[11px] sm:text-xs lg:text-sm font-semibold text-purple-100">{t.nav.topBannerTitle}</span>
-                <span className="text-yellow-300 font-extrabold text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1">⚡ {t.nav.limitedSlots}</span>
                 <span className="text-purple-100 font-medium text-[11px] sm:text-xs lg:text-sm inline-flex items-center gap-1 bg-white/10 px-2 sm:px-2.5 py-0.5 rounded-full border border-white/15">
                   <MapPin className="w-3 h-3 text-pink-300 shrink-0" />
                   <span>{lang === 'te' ? 'జైల్ రోడ్, విశాఖపట్నం' : 'Jail Road, Visakhapatnam'}</span>
-                </span>
-                <span className="bg-[#FFCC00] text-[#3D1443] font-black text-[10px] sm:text-xs px-2.5 py-0.5 rounded-full shadow-sm inline-flex items-center gap-1">
-                  ⚡ {lang === 'te' ? 'ఉచిత స్లాట్' : 'Book Free Slot'}
-                  <ChevronRight className="w-3 h-3 text-[#3D1443]" />
                 </span>
               </div>
               <span className="text-yellow-400/60 font-bold text-sm sm:text-base">•</span>
